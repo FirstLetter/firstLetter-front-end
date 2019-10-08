@@ -1,0 +1,28 @@
+@import url(/src/assets/css/theme.css);
+
+.border-content {
+    border-right: 2px solid var(--background);
+}
+
+.edit-text-content:hover, .edit-text-content:focus, .edit-text-content:active {
+    outline: none;
+}
+
+.border-title {
+    border-bottom: 2px solid var(--background);
+}
+
+.tab-manager {
+    border-bottom: 2px solid var(--background);
+}
+
+.tab-outlook {
+    font-family: var(--font-space-mono);
+    background-color: var(--backgroundLight);   
+    color: var(--textPrimary);
+    cursor: pointer;
+}
+
+.tab-outlook-is-active {
+    background-color: var(--accent);
+}

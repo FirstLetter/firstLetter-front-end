@@ -1,0 +1,19 @@
+@import url('/src/assets/css/theme.css');
+
+.not-found-text {
+    
+}
+
+.notfound-goHome {
+    font-family: var(--font-space-mono);
+    color: var(--textAccent);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.notfound-goHome:hover {
+    color: var(--accent);
+    text-decoration: none;
+}

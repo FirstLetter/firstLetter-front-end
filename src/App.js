@@ -11,10 +11,10 @@ function App() {
   const routeResult = useRoutes(routes)
   
   return (
-  <>
+  <div className="px-0 app-bg-main container-fluid h-100">
     {routeResult || <NotFoundPage />}
     <Footer />
-  </>)
+  </div>)
 }
 
 export default App;

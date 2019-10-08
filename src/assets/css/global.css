@@ -1,0 +1,28 @@
+@import url(/src/assets/css/theme.css);
+
+.toast-message {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    max-width: 360px;
+    text-align: center;
+    transform: translateX(-50%);
+    border-radius: 128px;
+    opacity: 0.8;
+}
+
+.data-tile {
+    height: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.data-tile-title {
+    max-lines: 3;
+}
+
+.data-tile:hover {
+    background-color: var(--textPrimary);
+}

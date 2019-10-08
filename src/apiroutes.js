@@ -1,24 +1,24 @@
 import Axios, {axios} from 'axios'
 import { RequestMethods, CONST_ERROR_NOT_FOUND } from './utils'
 
-const UriBuilder = ({scheme, domain, appendables}) => {
+export const UriBuilder = ({scheme, domain, appendables}) => {
     return [[scheme, domain].join("://"), appendables.join("/")].join('/')
 }
 
-const SCHEME = 'https' 
-const BASE_URL = 'api.github.com'
-const PRIME_USER = "firstLetter"
-const PRIME_REPO = "firstLetterPosts"
-const REPOS = 'repos'
-const FORKS = 'forks'
-const PULLS = 'pulls'
-const README = 'readme'
-const CONTENTS = 'contents'
+export const SCHEME = 'https' 
+export const BASE_URL = 'api.github.com'
+export const PRIME_USER = "firstLetter"
+export const PRIME_REPO = "firstLetterPosts"
+export const REPOS = 'repos'
+export const FORKS = 'forks'
+export const PULLS = 'pulls'
+export const README = 'readme'
+export const CONTENTS = 'contents'
 
 export const GitConst = {
     CreateFork: 'createFork',
     GetUserFork: 'getUserFork',
-    CreateNeFile: 'createNewFile',
+    CreateNewFile: 'createNewFile',
     GetPullForRepo: 'getPullForRepo',
     CreatePullRequest: 'createPullRequest',
     GetReadme: 'getReadme',
@@ -38,18 +38,18 @@ export const GithubApiInfo = {
 }
 
 export const GithubApiRoutes = {
-    [GitConst.CreateFork]: (username, repo) => [REPOS, username, repo, FORKS],
-    [GitConst.GetUserFork]: (username, repo) => [REPOS, username, repo],
-    [GitConst.CreateNewFile]: (username, repo, filename) => [REPOS, username, repo, username, filename],
-    [GitConst.GetPullForRepo]: (username, repo) => [REPOS, username, repo, PULLS],
-    [GitConst.CreatePullRequest]: (username, repo) => [REPOS, username, repo, PULLS],
-    [GitConst.GetReadme]: (username, repo) => [REPOS, username, repo, CONTENTS, username, README],
-    [GitConst.GetAllFiles]: (username, repo) => [REPOS, username, repo, CONTENTS, username],
-    [GitConst.GetFile]: (username, repo, filename) => [REPOS, username, repo, CONTENTS , username, filename],
+    [GitConst.CreateFork]: ({username, repo}) => [REPOS, username, repo, FORKS],
+    [GitConst.GetUserFork]: ({username, repo}) => [REPOS, username, repo],
+    [GitConst.CreateNewFile]: ({username, repo, filename}) => [REPOS, username, repo, CONTENTS, filename],
+    [GitConst.GetPullForRepo]: ({username, repo}) => [REPOS, username, repo, PULLS],
+    [GitConst.CreatePullRequest]: ({username, repo}) => [REPOS, username, repo, PULLS],
+    [GitConst.GetReadme]: ({username, repo}) => [REPOS, username, repo, CONTENTS, username, README],
+    [GitConst.GetAllFiles]: ({username, repo, filename}) => [REPOS, username, repo, CONTENTS, filename],
+    [GitConst.GetFile]: ({username, repo, filename}) => [REPOS, username, repo, CONTENTS , filename],
 }
 
 export const fetchAsync = async (url, method, data, config) => {
-    const result = null
+    let result = null
     switch(method){
         case RequestMethods.GET:
             result = await Axios.get(url, config) 

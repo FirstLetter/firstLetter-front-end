@@ -1,0 +1,7 @@
+@import url(/src/assets/css/theme.css);
+
+.footer {
+    font-family: var(--font-roboto-mono);
+    font-size: 16px;
+    text-align: center;
+}

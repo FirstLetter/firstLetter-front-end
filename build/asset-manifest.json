@@ -1,0 +1,21 @@
+{
+  "files": {
+    "static/js/0.a2f222e3.chunk.js": "/static/js/0.a2f222e3.chunk.js",
+    "static/js/0.a2f222e3.chunk.js.map": "/static/js/0.a2f222e3.chunk.js.map",
+    "main.css": "/static/css/main.e65ea764.chunk.css",
+    "main.js": "/static/js/main.ee1508a5.chunk.js",
+    "main.js.map": "/static/js/main.ee1508a5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.712c2ff6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.712c2ff6.js.map",
+    "static/js/3.22eaa6ac.chunk.js": "/static/js/3.22eaa6ac.chunk.js",
+    "static/js/3.22eaa6ac.chunk.js.map": "/static/js/3.22eaa6ac.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a654c035603dbb123ac518b46537a2b9.js": "/precache-manifest.a654c035603dbb123ac518b46537a2b9.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.e65ea764.chunk.css.map": "/static/css/main.e65ea764.chunk.css.map",
+    "static/media/Hacktoberfest_19.png": "/static/media/Hacktoberfest_19.c173c8fb.png",
+    "static/media/brands.min.css": "/static/media/fa-brands-400.cccc9d29.woff2",
+    "static/media/all.min.css": "/static/media/fa-solid-900.c2801fb4.svg",
+    "static/media/logo.svg": "/static/media/logo.25bf045c.svg"
+  }
+}

@@ -1,0 +1,19 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(/src/assets/fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face{
+    font-family: Roboto;
+    src: url(/src/assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: RobotoMono;
+    src: url(/src/assets/fonts/Roboto_Mono/RobotoMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: SpaceMono;
+    src: url(/src/assets/fonts/Space_Mono/SpaceMono-Regular.ttf);
+}

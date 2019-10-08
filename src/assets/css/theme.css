@@ -1,8 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Mono|Space+Mono&display=swap');
 :root {
     --background: #152347ff;
     --backgroundLight: #461d62ff;
     --accent: #f6eb26ff;
     --textPrimary: #1595ffff;
     --textPrimaryDark: #454ce2ff;
-    --textAccent: #b40b8aff;
+    --textAccent: #f503adff;
+    --font-open-sans: 'Open Sans', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-roboto-mono: 'Roboto Mono', consolas, 'ubuntu mono', monospace;
+    --font-space-mono: 'Space Mono', consolas, 'ubuntu mono', monospace;
+}
+.font-open-sans {
+    font-family: var(--font-open-sans);
+}
+.font-roboto {
+    font-family: var(--font-roboto);
+}
+.font-roboto-mono {
+    font-family: var(--font-roboto-mono);
+}
+.font-space-mono {
+    font-family: var(--font-space-mono);
+}
+.app-bg-main {
+    background-color: var(--background);
+}
+.app-bg-light {
+    background-color: var(--backgroundLight);
+}
+.app-bg-accent {
+    background-color: var(--accent); 
+}
+.app-bg-t-main {
+    background-color: var(--textPrimary); 
+}
+.app-bg-t-dark {
+    background-color: var(--textPrimaryDark); 
+}
+.app-bg-t-accent {
+    background-color: var(--textAccent); 
+}
+
+.app-text-bg-main {
+    color: var(--background);
+}
+.app-text-bg-light {
+    color: var(--backgroundLight);
+}
+.app-text-bg-accent {
+    color: var(--accent); 
+}
+.app-text-main {
+    color: var(--textPrimary); 
+}
+.app-text-dark {
+    color: var(--textPrimaryDark); 
+}
+.app-text-accent {
+    color: var(--textAccent); 
+}
+
+.font-size-10 {
+    font-size: 10px;
+}
+.font-size-12 {
+    font-size: 12px;
+}
+.font-size-14 {
+    font-size: 14px;
+}
+.font-size-16 {
+    font-size: 16px;
+}
+.font-size-18 {
+    font-size: 18px;
+}
+.font-size-20 {
+    font-size: 20px;
+}
+.font-size-24 {
+    font-size: 24px;
+}
+.font-size-28 {
+    font-size: 28px;
+}
+.font-size-36 {
+    font-size: 36px;
+}
+.font-size-48 {
+    font-size: 48px;
+}
+.outline-none:focus, .outline-none:active, .outline-none:hover  {
+    outline: none;
 }
