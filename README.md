@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# firstLetter
+First Letter is a repository that will allow contributors to share there designs, experiences(blogs) to increase participation of the people to opensource
+>>>>>>> c6a367dd7c069b44d4e4b8625660865763e282a6
