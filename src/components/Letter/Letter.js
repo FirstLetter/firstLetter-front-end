@@ -12,14 +12,6 @@ export const Letter = ({lettername, username}) => {
 
     const {loggedIn, user} = useLoginContext()
     
-    if(username !== PRIME_USER) {
-        if(loggedIn === false){
-            if(user.username !== username){
-                navigate('/home')
-            }
-        }
-    }
-    
     const {loading, data, error} = useGitFetchAsync(
         GitConst.GetFile, 
         {
