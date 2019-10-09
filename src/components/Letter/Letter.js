@@ -17,7 +17,7 @@ export const Letter = ({lettername, username}) => {
         {
             username: username,
             repo: PRIME_REPO,
-            filename: `${username}/${lettername}.txt`
+            filename: `${username}/${lettername}`
         },
         null,
         null

@@ -19,6 +19,10 @@ export const Howto = () => {
                         <li>Sign In to First Letter with your github account. And Share your knowledge about programming or any personal experiences that you would like to share using <a  className="text-decoration-none app-text-bg-accent font-weight-bold" href="https://guides.github.com/features/mastering-markdown/">markdown</a></li>
                     </ul>
                 </p>
+                <p>
+                    You have to make at least <strong>4 pull requests</strong>. To keep things simple please keep it <strong>One at a time. </strong> 
+                    i.e. create a file then send the pull request, and wait for your merge. To see details about your pull requests visit the link https://github.com/&lt;your-github-username&gt;. 
+                </p>
                 <br />
                 <h1>Why this project</h1>
                 <p>

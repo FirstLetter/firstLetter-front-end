@@ -10,7 +10,6 @@ import { useLoginContext } from 'context'
 import { LoadingComponent } from 'components/utils/Loader'
 import { useToastMessage } from 'components/useToastMessage'
 import {Toast} from 'components/utils/Toast' 
-import { withAuthLoad } from 'components/withAuthLoad'
 const MyFiles = lazy(() => import('components/MyPulls/MyPulls'))
 
 
@@ -31,7 +30,7 @@ const EditorContent = ({deftitle = "", deftext = "", onSelectNew = null, istitle
         {
             username: user.username,
             repo: PRIME_REPO,
-            filename: `${user.username}/${title}.txt`
+            filename: `${user.username}/${title}`
         },
         {
             message: "fileupdated",
@@ -60,33 +59,35 @@ const EditorContent = ({deftitle = "", deftext = "", onSelectNew = null, istitle
     } 
 
     return (
-        <div className="pt-2 container-fluid w-100 shadow-lg">
+        <div className="pt-2 container-fluid app-bg-main w-100 shadow-lg">
             {showing ? <Toast text="Make sure Title and content are not empty"/> : null}
-            <div className="row px-0 py-2">
-                <div className="col-12 px-0">
-                    <button className="border-0 px-3 py-2 text-light app-bg-t-main font-space-mono" onClick={handleClickSave}>
-                        Save {loading === true ? <LoadingComponent /> : "" } 
-                    </button>
-                    {onSelectNew ? <button className="ml-1 py-2 px-3 border-0 text-light app-bg-t-dark font-space-mono" onClick={() => onSelectNew()}>Add New +</button>: ""}
-                </div>
-                <div className="col-12 px-0 app-text-bg-accent font-size-12 font-space-mono">
-                    Please don't forget to save your content by clicking on the save button.
-                </div>
-            </div>
-            <div className="px-0 row app-bg-light rounded-sm overflow-hidden">
-                <div className="col-12 px-0 border-title">
-                    <input className="outline-none border-0 w-100 font-italic py-2 app-bg-light font-space-mono app-text-bg-accent px-2 border-bottom" type={text} placeholder="Enter title..." value={title} onChange={e => setTitle(e.target.value)} required disabled={istitleDisabled}/>
-                </div>
-                <div className="col-md-6 col-12 border-content px-0">
-                    <div className="font-size-18 font-space-mono py-2 px-2 app-text-main">Enter Content Here...</div>
-                    <div className="px-2">
-                        <textarea required className="edit-text-content w-100 border-0 app-bg-light app-text-bg-accent font-roboto-mono" value={text} onChange={(e) => setText(e.target.value)}/>
+            <div className="p-2 app-bg-main">
+                <div className="row px-1 py-2">
+                    <div className="col-12 px-0">
+                        <button className="border-0 px-3 py-2 text-light app-bg-t-main font-space-mono" onClick={handleClickSave}>
+                            Save {loading === true ? <LoadingComponent /> : "" } 
+                        </button>
+                        {onSelectNew ? <button className="ml-1 py-2 px-3 border-0 text-light app-bg-t-dark font-space-mono" onClick={() => onSelectNew()}>Add New +</button>: ""}
+                    </div>
+                    <div className="col-12 px-0 app-text-bg-accent font-size-12 font-space-mono">
+                        Please don't forget to save your content by clicking on the save button.
                     </div>
                 </div>
-                <div className="col-md-6 col-12 px-0">
-                    <div className="font-size-18 font-space-mono py-2 px-2 app-text-main">Output</div>
-                    <div className="px-2">
-                        <ReactMarkdown source={text} className="font-roboto-mono app-text-bg-accent" />
+                <div className="row px-1 app-bg-light rounded-sm overflow-hidden">
+                    <div className="col-12 px-0 border-title">
+                        <input className="outline-none border-0 w-100 font-italic py-2 app-bg-light font-space-mono app-text-bg-accent px-2 border-bottom" type={text} placeholder="Enter title..." value={title} onChange={e => setTitle(e.target.value)} required disabled={istitleDisabled}/>
+                    </div>
+                    <div className="col-md-6 col-12 border-content px-0">
+                        <div className="font-size-18 font-space-mono py-2 px-2 app-text-main">Enter Content Here...</div>
+                        <div className="px-2">
+                            <textarea required rows="25" className="edit-text-content w-100 border-0 app-bg-light app-text-bg-accent font-roboto-mono" value={text} onChange={(e) => setText(e.target.value)}/>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-12 px-0">
+                        <div className="font-size-18 font-space-mono py-2 px-2 app-text-main">Output</div>
+                        <div className="px-2">
+                            <ReactMarkdown source={text} className="font-roboto-mono app-text-bg-accent" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,13 +175,13 @@ const MyPullRequests = () => {
     
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid app-bg-main">
             {
                 showing === true && loading === false ? (
                     error ? <Toast text="Error Processing request"/> : <Toast text="Pull Request Sent!"/>
                 ) : ""
             }
-            <div className="row">
+            <div className="row px-0">
                 <div className="col-12">
                     <button className="app-bg-t-main text-white px-3 py-2 border-0 font-space-mono font-weight-bold font-size-18" onClick={handleClick}>
                         + Create a New Pull {loading ? <LoadingComponent /> : ""}
@@ -238,9 +239,9 @@ const MyEditor = ({currentSelected, onSelectNew}) => {
     console.log(EditorToRender)
 
     return (
-        <>
+        <div className="container-fluid app-bg-main">
             {EditorToRender}
-        </>
+        </div>
     ) 
 }
 
@@ -283,7 +284,7 @@ export const Content = withAuth(() => {
     }
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid app-bg-main">
             <Navigation />    
             <TabsManager 
                 tabsList={

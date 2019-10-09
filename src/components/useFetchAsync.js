@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { fetchAsync, UriBuilder, SCHEME, BASE_URL, GithubApiRoutes, GithubApiInfo } from 'apiroutes'
 
-export const useGitFetchAsync = (apiConst, d, body = null, config, defLoad=true) => {
+export const useGitFetchAsync = (apiConst, d, body = null, config=null, defLoad=true) => {
     const [loading, setLoading] = useState(defLoad)
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
