@@ -4,10 +4,6 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { useLoginContext } from 'context';
-import { setBasepath } from 'hookrouter'
-
-console.log(process.env.REACT_APP_BASE_URL_APP);
-setBasepath(process.env.REACT_APP_BASE_URL_APP);
 
 ReactDOM.render(
     <useLoginContext.Provider>

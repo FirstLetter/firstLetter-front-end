@@ -14,6 +14,8 @@ const DataTile = ({text, author, onClick}) => {
     )
 }
 
+
+
 const MyFiles = withAuthLoad(({onClick, fromFork = false}) => {
     
     const {user} = useLoginContext()
@@ -32,7 +34,7 @@ const MyFiles = withAuthLoad(({onClick, fromFork = false}) => {
     if(loading === true) {
         component = <LoadingComponent  />
     } else if(error !== null) {
-        component = <DataTile text="No Pulls" author="create New pull"/>
+        component = (fromFork === true ? <DataTile text="No Pulls" author="create New pull"/> : <DataTile text="No Local repo found" author="fork here" />)
     } else if(data !== null) {
         component = data.map((item, index) => <DataTile key={index} text={item.name.split(".")[0]} author={user.username} onClick={() => handleClick(index)}/>)
     }
