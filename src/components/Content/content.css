@@ -13,16 +13,22 @@
 }
 
 .tab-manager {
-    border-bottom: 2px solid var(--background);
+    border-bottom: 2px solid var(--accent);
 }
 
 .tab-outlook {
-    font-family: var(--font-space-mono);
-    background-color: var(--backgroundLight);   
-    color: var(--textPrimary);
+    font-family: var(--font-ibm-plex-mono);
+    font-weight: 500;
+    color: var(--color-blue-light-light);
     cursor: pointer;
 }
 
 .tab-outlook-is-active {
+    color: var(--background);
     background-color: var(--accent);
+    border-radius: 8px 8px 0px 0px;
+}
+
+.output-article-content-editor ul, ol {
+    list-style-position: inside !important;
 }

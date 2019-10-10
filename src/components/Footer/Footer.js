@@ -1,4 +1,5 @@
 import React from 'react'
+import 'assets/css/theme.css'
 import 'components/Footer/footer.css'
 import 'assets/fontawesome-free-5.11.2-web/css/all.min.css'
 import {A} from 'hookrouter'
@@ -9,10 +10,10 @@ const socialLinks = ({link, linkicon}) => {
 
 export const Footer = () => {
     return (
-        <div className="footer py-4 app-bg-main app-text-accent">
+        <div className="text-center py-4 font-ibm-plex-mono font-weight-500 app-bg-main app-text-indigo-light">
             Copyright &copy; FirstLetter. 2019
             <div className="py-2">
-                <a class="text-decoration-none app-text-bg-accent" href="https://vermakrtik.github.io">Know About Developer </a> | <A href='/howto' className="text-decoration-none app-text-bg-accent font-space-mono font-size-16">Read How to.</A>
+                <a class="text-decoration-none app-text-bg-accent app-text-blue-light-hover" href="https://vermakrtik.github.io">Know About Developer </a> | <A href='/howto' className="text-decoration-none app-text-bg-accent app-text-blue-light-hover font-ibm-plex-mono">Read How to.</A>
             </div>
         </div>
     )

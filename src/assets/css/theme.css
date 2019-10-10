@@ -1,15 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Mono|Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300i,400,400i,500&display=swap');
+
 :root {
     --background: #152347ff;
     --backgroundLight: #461d62ff;
-    --accent: #f6eb26ff;
+
+    --accent: #ffc107ff;
+    --textAccent: #f503adff;
+
+    --color-indigo: #ba68c8ff;
+    --color-indigo-light: #ee98fbff;
+
     --textPrimary: #1595ffff;
     --textPrimaryDark: #454ce2ff;
-    --textAccent: #f503adff;
+    
+    --color-blue-light: #4fc3f7ff;
+    --color-blue-light-light: #8bf6ffff;
+
+    --color-gray: #bdbdbdff;
+    --color-gray-light: #cfcfcfff;
+    
+
     --font-open-sans: 'Open Sans', sans-serif;
     --font-roboto: 'Roboto', sans-serif;
     --font-roboto-mono: 'Roboto Mono', consolas, 'ubuntu mono', monospace;
     --font-space-mono: 'Space Mono', consolas, 'ubuntu mono', monospace;
+    --font-ibm-plex-mono: 'IBM Plex Mono', consolas, 'ubuntu mono', monospace;
+}
+
+.font-ibm-plex-mono {
+    font-family: var(--font-ibm-plex-mono);
 }
 .font-open-sans {
     font-family: var(--font-open-sans);
@@ -23,6 +43,8 @@
 .font-space-mono {
     font-family: var(--font-space-mono);
 }
+
+/* backgrounds */
 .app-bg-main {
     background-color: var(--background);
 }
@@ -41,7 +63,35 @@
 .app-bg-t-accent {
     background-color: var(--textAccent); 
 }
+.app-bg-color-gray {
+    background-color: var(--color-gray);
+}
+.app-bg-color-gray-light {
+    background-color: var(--color-gray-light);
+}
+.app-bg-white {
+    background-color: #e3e2e1;
+}
+.app-bg-blue-light{
+    background-color: var(--color-blue-light);
+}
+.app-bg-blue-light-light{
+    background-color: var(--color-blue-light-light);
+}
+.app-bg-indigo{
+    background-color: var(--color-indigo);
+}
+.app-bg-indigo-light{
+    background-color: var(--color-indigo-light);
+}
 
+/* text */
+.app-text-white {
+    color: #e3e2e1;
+}
+.app-text-white-hover:hover {
+    color: #e3e2e1;
+}
 .app-text-bg-main {
     color: var(--background);
 }
@@ -60,6 +110,101 @@
 .app-text-accent {
     color: var(--textAccent); 
 }
+.app-text-gray {
+    color: var(--color-gray);
+}
+.app-text-gray-light {
+    color: var(--color-gray-light);
+}
+.app-text-blue-light{
+    color: var(--color-blue-light);
+}
+.app-text-blue-light-light{
+    color: var(--color-blue-light-light);
+}
+.app-text-indigo{
+    color: var(--color-indigo);
+}
+.app-text-indigo-light{
+    color: var(--color-indigo-light);
+}
+
+/* Hovers */
+.app-bg-main-hover:hover {
+    background-color: var(--background);
+}
+.app-bg-light-hover:hover {
+    background-color: var(--backgroundLight);
+}
+.app-bg-accent-hover:hover {
+    background-color: var(--accent); 
+}
+.app-bg-t-main-hover:hover {
+    background-color: var(--textPrimary); 
+}
+.app-bg-t-dark-hover:hover {
+    background-color: var(--textPrimaryDark); 
+}
+.app-bg-t-accent-hover:hover {
+    background-color: var(--textAccent); 
+}
+.app-bg-gray-hover:hover {
+    background-color: var(--color-gray);
+}
+.app-bg-gray-light-hover:hover {
+    background-color: var(--color-gray-light);
+}
+.app-bg-blue-light-hover:hover{
+    background-color: var(--color-blue-light);
+}
+.app-bg-blue-light-light-hover:hover{
+    background-color: var(--color-blue-light-light);
+}
+.app-bg-indigo-hover:hover{
+    background-color: var(--color-indigo);
+}
+.app-bg-indigo-light-hover:hover{
+    background-color: var(--color-indigo-light);
+}
+
+
+.app-text-bg-main-hover:hover {
+    color: var(--background);
+}
+.app-text-bg-light-hover:hover {
+    color: var(--backgroundLight);
+}
+.app-text-bg-accent-hover:hover {
+    color: var(--accent); 
+}
+.app-text-main-hover:hover {
+    color: var(--textPrimary); 
+}
+.app-text-dark-hover:hover {
+    color: var(--textPrimaryDark); 
+}
+.app-text-accent-hover:hover {
+    color: var(--textAccent); 
+}
+.app-text-gray-hover:hover {
+    color: var(--color-gray);
+}
+.app-text-gray-light-hover:hover {
+    color: var(--color-gray-light);
+}
+.app-text-blue-light-hover:hover{
+    color: var(--color-blue-light);
+}
+.app-text-blue-light-light-hover:hover{
+    color: var(--color-blue-light-light);
+}
+.app-text-indigo-hover:hover{
+    color: var(--color-indigo);
+}
+.app-bg-indigo-light-hover:hover{
+    color: var(--color-indigo-light);
+}
+
 
 .font-size-10 {
     font-size: 10px;
@@ -91,6 +236,26 @@
 .font-size-48 {
     font-size: 48px;
 }
+
+.font-weight-100{
+    font-weight: 100;
+}
+.font-weight-300{
+    font-weight: 300;
+}
+.font-weight-400{
+    font-weight: 400;
+}
+.font-weight-500{
+    font-weight: 500;
+}
+.font-weight-600{
+    font-weight: 600;
+}
+.font-weight-900{
+    font-weight: 900;
+}
+
 .outline-none:focus, .outline-none:active, .outline-none:hover  {
     outline: none;
 }

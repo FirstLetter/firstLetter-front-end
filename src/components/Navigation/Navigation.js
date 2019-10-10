@@ -25,7 +25,7 @@ const _Navigation = () => {
             <InLink href='/home' isActive={path == '/home'}>Home</InLink>
             <InLink href='/explore' isActive={path == '/explore'}>Exlpore</InLink>
             {loggedIn === false ? <OutLink href={MAKE_GIT_AUTH_URL()} >Github <i className="fab fa-github"></i> Log In</OutLink>: null}
-            {/* {loggedIn === false ? <OutLink href={'/user/signin/vermakartik'} >Github <i className="fab fa-github"></i> Log In</OutLink>: null} */}
+            {/* {loggedIn === false ? <InLink href={'/user/signin/vermakartik'} >Github <i className="fab fa-github"></i> Log In</InLink>: null} */}
             {loggedIn === true ? <InLink isActive={path=="/content"} href='/content'>Content</InLink> : null}
             {loggedIn === true ? <InLink href="#" onClick={handleLogout}>Logout</InLink>: null}
         </>

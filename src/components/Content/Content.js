@@ -59,34 +59,34 @@ const EditorContent = ({deftitle = "", deftext = "", onSelectNew = null, istitle
     } 
 
     return (
-        <div className="pt-2 container-fluid app-bg-main w-100 shadow-lg">
+        <div className="container-fluid app-bg-main w-100 shadow-lg">
             {showing ? <Toast text="Make sure Title and content are not empty"/> : null}
-            <div className="p-2 app-bg-main">
-                <div className="row px-1 py-2">
+            <div className="app-bg-main">
+                <div className="row px-1">
                     <div className="col-12 px-0">
-                        <button className="border-0 px-3 py-2 text-light app-bg-t-main font-space-mono" onClick={handleClickSave}>
+                        <button className="px-3 py-2 font-weight-500 font-ibm-plex-mono app-bg-blue-light-hover border-0 app-text-bg-main-hover app-bg-indigo rounded-sm" onClick={handleClickSave}>
                             Save {loading === true ? <LoadingComponent /> : "" } 
                         </button>
-                        {onSelectNew ? <button className="ml-1 py-2 px-3 border-0 text-light app-bg-t-dark font-space-mono" onClick={() => onSelectNew()}>Add New +</button>: ""}
+                        {onSelectNew ? <button className="ml-1 px-3 py-2 font-weight-500 font-ibm-plex-mono app-bg-blue-light-hover border-0 app-text-bg-main-hover app-bg-indigo rounded-sm" onClick={() => onSelectNew()}>Add New +</button>: ""}
                     </div>
-                    <div className="col-12 px-0 app-text-bg-accent font-size-12 font-space-mono">
+                    <div className="col-12 px-0 app-text-bg-accent font-size-14 font-ibm-plex-mono">
                         Please don't forget to save your content by clicking on the save button.
                     </div>
                 </div>
-                <div className="row px-1 app-bg-light rounded-sm overflow-hidden">
+                <div className="row app-bg-light rounded-sm overflow-hidden">
                     <div className="col-12 px-0 border-title">
-                        <input className="outline-none border-0 w-100 font-italic py-2 app-bg-light font-space-mono app-text-bg-accent px-2 border-bottom" type={text} placeholder="Enter title..." value={title} onChange={e => setTitle(e.target.value)} required disabled={istitleDisabled}/>
+                        <input className="outline-none border-0 w-100 font-italic py-2 app-bg-light font-ibm-plex-mono font-weight-500 app-text-bg-accent px-2 border-bottom" type={text} placeholder="Enter title..." value={title} onChange={e => setTitle(e.target.value)} required disabled={istitleDisabled}/>
                     </div>
                     <div className="col-md-6 col-12 border-content px-0">
-                        <div className="font-size-18 font-space-mono py-2 px-2 app-text-main">Enter Content Here...</div>
-                        <div className="px-2">
-                            <textarea required rows="25" className="edit-text-content w-100 border-0 app-bg-light app-text-bg-accent font-roboto-mono" value={text} onChange={(e) => setText(e.target.value)}/>
+                        <div className="px-2"><div className="font-size-18 py-2 font-ibm-plex-mono app-text-blue-light" style={{borderBottom: "2px solid var(--color-blue-light)"}}>Enter Content Here...</div></div>
+                        <div className="px-2 pt-1">
+                            <textarea required rows="25" className="edit-text-content w-100 border-0 app-bg-light app-text-gray-light font-roboto-mono" value={text} onChange={(e) => setText(e.target.value)}/>
                         </div>
                     </div>
                     <div className="col-md-6 col-12 px-0">
-                        <div className="font-size-18 font-space-mono py-2 px-2 app-text-main">Output</div>
-                        <div className="px-2">
-                            <ReactMarkdown source={text} className="font-roboto-mono app-text-bg-accent" />
+                        <div className="px-2"><div className="font-size-18 font-ibm-plex-mono app-text-blue-light py-2 px-2" style={{borderBottom: "2px solid var(--color-blue-light)"}}>Output</div></div>
+                        <div className="px-2 pt-1 output-article-content-editor">
+                            <ReactMarkdown source={text} className="font-roboto-mono app-text-gray-light" />
                         </div>
                     </div>
                 </div>
@@ -183,7 +183,7 @@ const MyPullRequests = () => {
             }
             <div className="row px-0">
                 <div className="col-12">
-                    <button className="app-bg-t-main text-white px-3 py-2 border-0 font-space-mono font-weight-bold font-size-18" onClick={handleClick}>
+                    <button className="px-3 py-2 font-weight-500 font-ibm-plex-mono app-bg-blue-light-hover border-0 app-text-bg-main-hover app-bg-indigo rounded-sm" onClick={handleClick}>
                         + Create a New Pull {loading ? <LoadingComponent /> : ""}
                     </button>
                 </div>
@@ -232,7 +232,7 @@ const MyEditor = ({currentSelected, onSelectNew}) => {
         } else if(loading === false && error !== null) {
             EditorToRender = <div className="app-text-accent font-face-space-mono font-size-20">Error Loading Data...</div>
         } else if(loading === false && data !== null) {
-            EditorToRender = <EditorContent onSelectNew={() => onSelectNew()} deftitle={data.name.split(".")[0]} deftext={atob(data.content)} istitleDisabled={true} sha={data.sha} />
+            EditorToRender = <EditorContent onSelectNew={() => onSelectNew()} deftitle={data.name} deftext={atob(data.content)} istitleDisabled={true} sha={data.sha} />
         }
     }
 
@@ -247,7 +247,7 @@ const MyEditor = ({currentSelected, onSelectNew}) => {
 
 const TabOutlook = ({text, isActive, onClick}) => {
     return (
-        <div onClick={onClick} className={`py-2 d-inline-block col-md-1 text-center col-12 tab-outlook px-2 py-1 ${isActive === true ? "tab-outlook-is-active font-weight-bold" : ""}`}>
+        <div onClick={onClick} className={`d-inline-block col-md-1 text-center col-12 tab-outlook px-2 py-1 ${isActive === true ? "tab-outlook-is-active" : ""}`}>
             {text}
         </div>
     )
@@ -256,7 +256,7 @@ const TabOutlook = ({text, isActive, onClick}) => {
 const TabsManager = ({tabsList, currentTab, onClick}) => {
     
     return (
-        <div className="tabmanager app-bg-light">
+        <div className="tab-manager">
             {tabsList.map((item, index) => {
                 return <TabOutlook key={index} text={item} isActive={currentTab === item} onClick={() => onClick(item)}/>
             })}

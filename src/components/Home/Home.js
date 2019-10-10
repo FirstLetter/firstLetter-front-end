@@ -24,6 +24,7 @@ export const Home = () => {
                             navigate(`/letter/${data.path}`)
                         }}/>
                     </Suspense>
+                    <div style={{height: "1px", borderRadius: "4px", width: "100%", backgroundColor: 'var(--backgroundLight)'}} className="my-4"></div>
                     <Suspense fallback={<div className="font-space-mono">Loading your pulls <LoadingComponent /> </div>}>
                         <MyFiles fromFork={true} onClick={(data) => {
                             navigate(`/letter/${data.path}`)

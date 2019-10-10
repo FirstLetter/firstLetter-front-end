@@ -6,7 +6,7 @@ export const Explore = () => {
     return (
         <div className="container-fluid">
             <Navigation />
-            <div className="app-text-main font-space-mono font-weight-bold font-size-20">
+            <div className="py-3 app-text-gray-light font-ibm-plex-mono font-size-18">
                 Coming Soon... Currenlty in development phase :-)
             </div>
         </div>
