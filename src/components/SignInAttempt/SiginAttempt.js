@@ -33,13 +33,13 @@ export const SigninAttempt = ({username}) => {
     const handleLogin = async () => {
         const url = [BACKEND_URL, END_POINT].join('/')
         // console.log(url)
-        // const info = await fetchAsync(url, RequestMethods.POST, {query: CONST_QUERY(username)})
-        // setData(info.data.data.githubUser)
-        setData({
-            github_username: "vermakartik",
-            user_auth_token: "cdf08b1ceae32b356a7b34084aed9be54e0b53ee" 
-            // user_auth_token: "cdf08b1ceae32b356a7b34084aed9be54e0b53ef" 
-        })
+        const info = await fetchAsync(url, RequestMethods.POST, {query: CONST_QUERY(username)})
+        setData(info.data.data.githubUser)
+        // setData({
+        //     github_username: "vermakartik",
+        //     user_auth_token: "cdf08b1ceae32b356a7b34084aed9be54e0b53ee" 
+        //     // user_auth_token: "cdf08b1ceae32b356a7b34084aed9be54e0b53ef" 
+        // })
         // console.log("from handle login...")
         // console.log(info.data)       
         setLoading(false)
