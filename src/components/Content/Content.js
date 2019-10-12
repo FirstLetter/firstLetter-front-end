@@ -72,6 +72,16 @@ const EditorContent = ({deftitle = "", deftext = "", onSelectNew = null, istitle
                     <div className="col-12 px-0 app-text-bg-accent font-size-14 font-ibm-plex-mono">
                         Please don't forget to save your content by clicking on the save button.
                     </div>
+                    
+                    <div className="col-12 px-0 app-text-bg-accent font-size-14 font-ibm-plex-mono">
+                        <p className="app-text-gray">
+                            <a className="text-decoration-none font-weight-bold font-size-20 app-text-bg-accent app-text-blue-light-hover" href="https://firstletter.github.io/letter/vermakartik/Make%20your%20first%20pull%20request%20with%20FirstLetter">Read Here</a> about how to make a pull request with FirstLetter. 
+                        </p>
+                        <p className="app-text-gray">
+                            You must follow the <a className="text-decoration-none font-weight-bold font-size-20 app-text-bg-accent app-text-blue-light-hover" href="https://firstletter.github.io/letter/vermakartik/Conventions">Conventions</a> for your pull request to be merged.
+                        </p>
+                    </div>
+                    
                 </div>
                 <div className="row app-bg-light rounded-sm overflow-hidden">
                     <div className="col-12 px-0 border-title">
@@ -186,6 +196,16 @@ const MyPullRequests = () => {
                     <button className="px-3 py-2 font-weight-500 font-ibm-plex-mono app-bg-blue-light-hover border-0 app-text-bg-main-hover app-bg-indigo rounded-sm" onClick={handleClick}>
                         + Create a New Pull {loading ? <LoadingComponent /> : ""}
                     </button>
+                </div>
+
+                <div className="col-12 font-weight-500 font-ibm-plex-mono app-bg-blue-light-hover">
+                    <p>You are allowed to make only <strong>one pull request at a time</strong>. Wait for your pull request to merged.
+                        <br />
+                        While in mean time you can create another <em>letter</em> :-) 
+                    </p>
+                    <p>
+                        You can view <a href={`https://github.com/${user.username}/firstLetterPosts/pulls`}>here</a> if your pending pull requests.
+                    </p>
                 </div>
             </div>
         </div>
