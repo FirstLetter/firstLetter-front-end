@@ -34,7 +34,7 @@ export const Letter = ({lettername, username}) => {
         toRender = (
             <>
             <h1 style={{backgroundColor: "#bdbdbd0f"}} className="font-ibm-plex-mono px-2 app-text-blue-light-light pb-3 pt-1 font-size-28"><span className="font-italic app-text-accent"></span>{data.name.split('.')[0]}</h1>
-            <div className="px-2 output-article-content-editor">
+            <div className="px-2 output-article-content">
                 <ReactMarkdown source={atob(data.content)} />
             </div>
             </>

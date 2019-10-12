@@ -260,6 +260,6 @@
     outline: none;
 }
 
-.output-article-content-editor ul, ol {
+.output-article-content ul, ol {
     list-style-position: inside !important;
 }
