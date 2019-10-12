@@ -13,7 +13,7 @@ export const Footer = () => {
         <div className="text-center py-4 font-ibm-plex-mono font-weight-500 app-bg-main app-text-indigo-light">
             Copyright &copy; FirstLetter. 2019
             <div className="py-2">
-                <a class="text-decoration-none app-text-bg-accent app-text-blue-light-hover" href="https://vermakrtik.github.io">Know About Developer </a> | <A href='/howto' className="text-decoration-none app-text-bg-accent app-text-blue-light-hover font-ibm-plex-mono">Read How to.</A>
+                <a class="text-decoration-none app-text-bg-accent app-text-blue-light-hover" href="https://vermakartik.github.io">Know About Developer </a> | <A href='/howto' className="text-decoration-none app-text-bg-accent app-text-blue-light-hover font-ibm-plex-mono">Read How to.</A>
             </div>
         </div>
     )

@@ -20,8 +20,14 @@ export const Howto = () => {
                     </ul>
                 </p>
                 <p className="app-text-gray">
-                    You have to make at least <strong>4 pull requests</strong>. To keep things simple please keep it <strong>One at a time. </strong> 
+                    You have to make at least <strong>4 pull requests</strong>. To keep things simple please keep it <strong>One at a time. </strong>
                     i.e. create a file then send the pull request, and wait for your merge. To see details about your pull requests visit the link https://github.com/&lt;your-github-username&gt;. 
+                </p>
+                <p className="app-text-gray">
+                    <a className="text-decoration-none font-weight-bold font-size-20 app-text-bg-accent app-text-blue-light-hover" href="https://firstletter.github.io/letter/vermakartik/Make%20your%20first%20pull%20request%20with%20FirstLetter">Read Here</a> about how to make a pull request with FirstLetter. 
+                </p>
+                <p>
+
                 </p>
                 <br />
                 <h1 className="app-text-white">Why this project</h1>

@@ -7,7 +7,7 @@ import 'assets/css/theme.css'
 import HacktoberImage from 'assets/images/Hacktoberfest_19.png'
 import 'assets/fontawesome-free-5.11.2-web/css/brands.min.css'
 
-export const InLink = (props) => <span className={`px-1 px-md-2`}><A className={`link ${props.isActive === true ? "active-tab": ""}`}  {...props}>{props.children}</A></span>
+export const InLink = (props) => <span className={`px-2 px-md-2`}><A className={`link ${props.isActive === true ? "active-tab": ""}`}  {...props}>{props.children}</A></span>
 export const OutLink = (props) => <span className="px-1 px-md-2"><a className="link" {...props}>{props.children}</a></span>
 
 const _Navigation = () => {

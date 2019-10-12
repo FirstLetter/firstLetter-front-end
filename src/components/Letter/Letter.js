@@ -56,7 +56,7 @@ export const Letter = ({lettername, username}) => {
     }
 
     return (
-        <div className="container-fluid">    
+        <div className="container-fluid app-bg-main">    
             <Navigation />
             <div className="container">
                 <div className="row">
