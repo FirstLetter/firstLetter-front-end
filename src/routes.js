@@ -6,6 +6,7 @@ import { Explore } from 'components/Explore/Explore';
 import { Letter } from 'components/Letter/Letter';
 import { Howto } from 'components/HowTo';
 import { HowToContainer } from 'components/HowToContainer';
+import { TermsOfUse } from 'components/TermsOfUse';
 
 export const routes = {
     "/user/signin/:username": ({username}) => <SigninAttempt username={username} />,
@@ -13,6 +14,7 @@ export const routes = {
     "/content": () => <Content />,
     "/explore": () => <Explore />,
     "/letter/:username/:lettername": ({username, lettername}) => <Letter username={username} lettername={lettername} />,
-    "/howto": ()  => <HowToContainer />
+    "/howto": ()  => <HowToContainer />,
+    "/terms-of-use": ()  => <TermsOfUse />
 }
 

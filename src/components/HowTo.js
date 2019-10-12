@@ -26,8 +26,8 @@ export const Howto = () => {
                 <p className="app-text-gray">
                     <a className="text-decoration-none font-weight-bold font-size-20 app-text-bg-accent app-text-blue-light-hover" href="https://firstletter.github.io/letter/vermakartik/Make%20your%20first%20pull%20request%20with%20FirstLetter">Read Here</a> about how to make a pull request with FirstLetter. 
                 </p>
-                <p>
-
+                <p className="app-text-gray">
+                    You must follow the <a className="text-decoration-none font-weight-bold font-size-20 app-text-bg-accent app-text-blue-light-hover" href="https://firstletter.github.io/letter/vermakartik/Conventions">Conventions</a> for your pull request to be merged.
                 </p>
                 <br />
                 <h1 className="app-text-white">Why this project</h1>
