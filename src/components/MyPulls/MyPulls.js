@@ -121,7 +121,7 @@ const MyFiles = withAuthLoad(({onClick, fromFork = false}) => {
             component = <DataTile text="No Pulls Found" author="" />
         }
     } else if(data !== null) {
-        component = <div className="row">data.map((item, index) => <DataTile key={index} text={item.name.split(".")[0]} author={user.username} onClick={() => handleClick(index)}/>)</div>
+        component = <div>{data.map((item, index) => <DataTile key={index} text={item.name.split(".")[0]} author={user.username} onClick={() => handleClick(index)}/>)}</div>
     }
 
     return <div className="row">
