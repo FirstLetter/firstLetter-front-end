@@ -19,7 +19,7 @@ export const Home = () => {
                 loggedIn === false ?
                 <Howto /> :
                 <> 
-                    <Suspense fallback={<div className="font-space-mono">Loading your pulls <LoadingComponent /> </div>}>
+                    <Suspense fallback={<div className="font-ibm-plex-mono">Loading your pulls <LoadingComponent /> </div>}>
                         <MyFiles onClick={(data) => {
                             navigate(`/letter/${data.path}`)
                         }}/>

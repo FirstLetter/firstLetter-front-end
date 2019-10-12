@@ -259,3 +259,7 @@
 .outline-none:focus, .outline-none:active, .outline-none:hover  {
     outline: none;
 }
+
+.output-article-content-editor ul, ol {
+    list-style-position: inside !important;
+}
